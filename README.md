@@ -35,6 +35,7 @@ Setup and Execution
   The script below extracts images from a zip file:
 
   python
+    
     from zipfile import ZipFile
     import os
 
@@ -53,6 +54,7 @@ Setup and Execution
   To display the first image from the dataset, you can use the following code:
 
   python
+   
     from PIL import Image
     import matplotlib.pyplot as plt
 
@@ -69,16 +71,17 @@ Setup and Execution
   Generate a list of image file paths and preprocess each image to prepare for feature extraction:
 
   python
-  import glob
+    
+    import glob
+    image_directory = 'path_to_images_directory'
 
-  image_directory = 'path_to_images_directory'
-
-  image_paths_list = [file for file in glob.glob(os.path.join(image_directory, '*.*')) if file.endswith(('.jpg', '.png', '.jpeg', 'webp'))]
-  print(image_paths_list)
+    image_paths_list = [file for file in glob.glob(os.path.join(image_directory, '*.*')) if file.endswith(('.jpg', '.png', '.jpeg', 'webp'))]
+    print(image_paths_list)
 4. Extract Features from Images
   Use the pre-trained VGG16 model to extract image features:
 
   python
+    
     from tensorflow.keras.preprocessing import image
     from tensorflow.keras.applications.vgg16 import VGG16, preprocess_input
     from tensorflow.keras.models import Model
@@ -99,10 +102,10 @@ Setup and Execution
       normalized_features = flattened_features / np.linalg.norm(flattened_features)
       return normalized_features
 
-  all_features = []
-  all_image_names = []
+    all_features = []
+    all_image_names = []
 
-  for img_path in image_paths_list:
+    for img_path in image_paths_list:
       preprocessed_img = preprocess_image(img_path)
       features = extract_features(model, preprocessed_img)
       all_features.append(features)
@@ -111,11 +114,12 @@ Setup and Execution
   Implement the recommendation function based on cosine similarity:
 
 python
-  from scipy.spatial.distance import cosine
-  import matplotlib.pyplot as plt
-  from PIL import Image
+ 
+    from scipy.spatial.distance import cosine
+    import matplotlib.pyplot as plt
+    from PIL import Image
 
-  def recommend_fashion_items_cnn(input_image_path, all_features, all_image_names, model, top_n=5):
+    def recommend_fashion_items_cnn(input_image_path, all_features, all_image_names, model, top_n=5):
       preprocessed_img = preprocess_image(input_image_path)
       input_features = extract_features(model, preprocessed_img)
       
@@ -142,6 +146,7 @@ python
 Provide the path to the input image and visualize recommendations:
 
   python
+   
     input_image_path = "path_to_input_image"
     recommend_fashion_items_cnn(input_image_path, all_features, all_image_names, model, top_n=4)
 Results
