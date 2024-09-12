@@ -1,13 +1,14 @@
-**Fashion Recommendation System using Image Features**
-Overview
+# Fashion Recommendation System using Image Features
+
+## Overview
 This project implements a Fashion Recommendation System that leverages deep learning and image processing to recommend visually similar fashion items. Using the VGG16 Convolutional Neural Network (CNN) model pre-trained on ImageNet, the system extracts image features from a dataset of fashion images and ranks them based on visual similarity to a user-provided input image.
 
-Key Features
+## Key Features
   1.Dataset Processing: Extracts and processes a large dataset of fashion images to prepare them for feature extraction.
   2.CNN Feature Extraction: Utilizes the VGG16 model to extract meaningful image features for comparison.
   3.Cosine Similarity Ranking: Measures similarity between feature vectors to find the most visually similar fashion items.
   4.Recommendations Visualization: Displays the input image alongside its top recommendations.
-Requirements
+## Requirements
   Python 3.x
   TensorFlow
   Keras
@@ -16,21 +17,21 @@ Requirements
   PIL (Pillow)
   SciPy
   
-Install the necessary libraries using the command:
+## Install the necessary libraries using the command:
 
 bash
   pip install tensorflow keras numpy matplotlib pillow scipy
-Dataset
+## Dataset
   You will need a dataset of fashion images for this project. Ensure your dataset includes a wide variety of fashion items (e.g., dresses, shirts, pants, etc.) with diverse colors, patterns, and styles.
 
 In this example, we use a zip file containing a directory of images named women-fashion.zip. Ensure the dataset follows a consistent file format (e.g., .jpg, .png, .jpeg, .webp).
 
-Project Structure
+## Project Structure
   1.Extract Dataset: The dataset is extracted from a zip file and processed for feature extraction.
   2.Feature Extraction: Uses VGG16 to extract feature vectors from images.
   3.Similarity Measurement: Calculates cosine similarity between feature vectors to rank fashion items based on visual similarity.
   4.Recommendation System: Recommends the top N visually similar items for a given input image.
-Setup and Execution
+## Setup and Execution
   1. Extract the Dataset
   The script below extracts images from a zip file:
 
@@ -149,12 +150,12 @@ Provide the path to the input image and visualize recommendations:
    
     input_image_path = "path_to_input_image"
     recommend_fashion_items_cnn(input_image_path, all_features, all_image_names, model, top_n=4)
-Results
+## Results
     The model outputs the input image along with the top N most similar fashion recommendations based on visual features.
 
-Future Work
+## Future Work
   Add more diverse datasets to improve recommendation accuracy.
   Optimize the model for faster prediction times.
   Integrate the system into a web-based application for live recommendations.
-License
+## License
   This project is licensed under the MIT License.
