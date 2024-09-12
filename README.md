@@ -1,4 +1,4 @@
-Fashion Recommendation System using Image Features
+**Fashion Recommendation System using Image Features**
 Overview
 This project implements a Fashion Recommendation System that leverages deep learning and image processing to recommend visually similar fashion items. Using the VGG16 Convolutional Neural Network (CNN) model pre-trained on ImageNet, the system extracts image features from a dataset of fashion images and ranks them based on visual similarity to a user-provided input image.
 
