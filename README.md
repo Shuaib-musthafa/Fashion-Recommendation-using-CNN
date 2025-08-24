@@ -3,7 +3,7 @@
 ## Overview
 This project implements a Fashion Recommendation System that leverages deep learning and image processing to recommend visually similar fashion items. Using the VGG16 Convolutional Neural Network (CNN) model pre-trained on ImageNet, the system extracts image features from a dataset of fashion images and ranks them based on visual similarity to a user-provided input image.
 
-## Key Features
+## Key Features : 
   1.Dataset Processing: Extracts and processes a large dataset of fashion images to prepare them for feature extraction.
   2.CNN Feature Extraction: Utilizes the VGG16 model to extract meaningful image features for comparison.
   3.Cosine Similarity Ranking: Measures similarity between feature vectors to find the most visually similar fashion items.
