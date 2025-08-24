@@ -5,3 +5,5 @@ numpy
 pillow
 scipy
 joblib
+matplotlib
+pandas
