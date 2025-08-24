@@ -16,6 +16,7 @@ This project implements a Fashion Recommendation System that leverages deep lear
   Matplotlib
   PIL (Pillow)
   SciPy
+  scikit-learn
   
 ## Install the necessary libraries using the command:
 
